@@ -1,7 +1,14 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
-  resources :products
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  mount Sidekiq::Web => '/sidekiq'
+  get 'other/job_done'
+  get "welcome/index"
+  root to: "welcome#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # route where any visitor require the helloWorldJob to be triggered
+  post "welcome/trigger_job"
+
+  # where visitor are redirected once job has been called
+  get "other/job_done"
 end
+  
