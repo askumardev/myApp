@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    #@secret = ENV['SECRET']
   end
   
   def trigger_job
