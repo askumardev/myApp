@@ -12,13 +12,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="row">
+      <%= render partial: 'shared/header'%>
+    </div>  
+    
     <div class="container">
-
-      <div class="row">
-        
-        <%= render partial: 'shared/header'%>
-      </div>      
+      <%= yield %>
+          
     </div>
   </body>
 </html>
