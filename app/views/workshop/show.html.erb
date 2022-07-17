@@ -4,12 +4,11 @@
     <%= @ws.name %>
   </div>
   <div class="card-body">
-    <h5 class="card-title"><%= @ws.description %></h5>
-    <h4><span class="badge bg-success">From <%= @ws.start_date%> to <%= @ws.end_date%></span></h4>
-    <h4><span class="badge bg-warning">From <%= @ws.start_time%> to <%= @ws.end_time%></span></h4>
+    <h5 class="card-title"><%= @ws.description %></h5>    
     <%= link_to "Back", workshop_index_path, class: "btn btn-outline-info" %>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+    <h4><span class="badge bg-success">From <%= @ws.start_date%> to <%= @ws.end_date%></span>
+    <span class="badge bg-warning">From <%= @ws.start_time%> to <%= @ws.end_time%></span></h4>
   </div>
 </div>
