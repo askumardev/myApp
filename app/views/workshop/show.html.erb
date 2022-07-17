@@ -4,7 +4,16 @@
     <%= @ws.name %>
   </div>
   <div class="card-body">
-    <h5 class="card-title"><%= @ws.description %></h5>    
+    <div class="row">
+      <div class="col-lg-7">
+        <h5 class="card-title"><%= @ws.description %></h5>
+      </div>
+      <div class="col-lg-5">
+        <h4><span class="badge bg-secondary">Total Sits: <%= @ws.total_sits%></span></h4>
+        <h4><span class="badge bg-secondary">Remaining Sits: <%= @ws.remaining_sits%></span></h4>
+        <h4><span class="badge bg-secondary">Registration Fee: <%= @ws.registration_fee%></span></h4>
+      </div>
+    </div>
     <%= link_to "Back", workshop_index_path, class: "btn btn-outline-info" %>
   </div>
   <div class="card-footer text-muted">
