@@ -11,12 +11,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <div class="row">
-      <%= render partial: 'shared/header'%>
-    </div>    
+  <body>    
+    <%= render partial: 'shared/header'%>   
     <div class="container">
-      <%= yield %>
+      <div class="row">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
