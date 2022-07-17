@@ -1,0 +1,13 @@
+<h1>Workshop#index</h1>
+<% @ws.each do |ws|%>
+  <div class="card">
+    <div class="card-header">
+      <%= ws.name %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= ws.description %></h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+<% end %>

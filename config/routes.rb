@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root to: "home#index"  
   # root to: "welcome#index"
   # get 'home/index'
+  #get 'workshop/index'
+  resources :workshop, only: %i[index show]
 
   # route where any visitor require the helloWorldJob to be triggered
   post "welcome/trigger_job"
