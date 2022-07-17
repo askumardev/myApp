@@ -9,6 +9,9 @@ gem 'sidekiq'
 gem 'foreman'
 gem 'sidekiq-cron'
 gem 'redis'
+gem 'jsbundling-rails' 
+gem 'cssbundling-rails'
+gem 'bootstrap', '~> 5.1.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
