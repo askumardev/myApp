@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
   get 'other/job_done'
   get "welcome/index"
-  root to: "home#index"  
-  # root to: "welcome#index"
+  #root to: "home#index"  
+  root to: "welcome#index"
   # get 'home/index'
   #get 'workshop/index'
   resources :workshop, only: %i[index show]
