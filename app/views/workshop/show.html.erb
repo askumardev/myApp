@@ -25,32 +25,57 @@
     </div>
   </div>
   <div class="col-lg-4">
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="card shadow">
+      <div class="card-body">
+        <h4 class="card-title"> Reserve your seat!</h4>
+        <%= form_with url: "#", data: {turbo: false} do |f| %>
+          <% f.hidden_field :workshop_id, value: @ws.id %>
+          <div class="form-group">
+            <%= f.label :full_name%>
+            <%= f.text_field :full_name, class: "form-control", required: true%>
+          </div>
+          <div class="form-group">
+            <%= f.label :email%>
+            <%= f.text_field :email, class: "form-control", required: true%>
+          </div>
+          <div class="form-group">
+            <%= f.label :contact_number%>
+            <%= f.text_field :contact_number, class: "form-control", required: true%>
+          </div>
+          <div class="form-group">
+            <%= f.label :no_of_sits%>
+            <%= f.number_field :no_of_tickets, class: "form-control", required: true, min: 1, max: @ws.remaining_sits %>
+          </div>
+          <h4 class="card-title">Card details</h4>
+          <div class="form-group">
+            <%= f.label :card_number%>
+            <%= f.text_field :card_number, class: "form-control", required: true%>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <%= f.label :cvv%>
+                <%= f.text_field :cvv, class: "form-control", required: true, maxlength:4 %>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <%= f.label :exp_month%>
+                <%= f.number_field :exp_month, class: "form-control", required: true, min:1, max: 12 %>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <%= f.label :exp_year%>
+                <%= f.number_field :exp_year, class: "form-control", required: true, min:2022, max: 2030 %>
+              </div>
+            </div>
+          </div><br>
+          <div class="d-grid gap-2">
+            <%= f.submit "Book ticket", class: "btn btn-primary"%>
+          </div>
+        <% end %>
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <div class="form-row align-items-center">
-        <div class="col-auto my-1">
-          <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>    
   </div>
 </div>
