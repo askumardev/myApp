@@ -17,4 +17,6 @@ class StripeService
       stripe_customer
     end
   end
+
+  
 end
