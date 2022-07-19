@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_17_133600) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_19_173048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "no_if_tickets"
+    t.integer "no_of_tickets"
     t.float "amount_paid"
     t.string "stripe_transaction_id"
     t.bigint "customer_id", null: false
