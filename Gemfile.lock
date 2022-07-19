@@ -228,6 +228,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
+    stripe (6.5.0)
     strscan (3.0.1)
     thor (1.2.1)
     tilt (2.0.10)
@@ -277,6 +278,7 @@ DEPENDENCIES
   sidekiq-cron
   sprockets-rails
   stimulus-rails
+  stripe
   turbo-rails
   tzinfo-data
   web-console
