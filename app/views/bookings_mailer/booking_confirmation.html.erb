@@ -1,5 +1,20 @@
-<h1>Bookings#booking_confirmation</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/bookings_mailer/booking_confirmation.html.erb
-</p>
+<div class="col-lg-10">
+  <div class="card shadow">
+    <div class="card-header">
+      <h4 class="card-title">Booking Confirmation</h4>
+    </div>
+    <div class="card-body">
+      <h3>Greeting from WebRor</h3>
+      <h4>Hello <%= @customer.full_name%></h4>
+      <p class="lead">Your booking for <strong><%= @workshop.name %> has been confirmed. Below are the details.</strong></p>
+      <h3>Booking details</h3>
+      <p><strong>No.Of tickets:</strong> <%= @booking.no_of_tickets %></p>
+      <p><strong>Amount paid:</strong> <%= @booking.amount_paid %></p>
+      <hr>
+      <h3>Schedule from WebRor</h3>
+      <h4><span class="badge bg-success">From <%= @workshop.start_date%> to <%= @workshop.end_date%></span>
+        <span class="badge bg-warning">From <%= @workshop.start_time%> to <%= @workshop.end_time%></span>
+      </h4>
+    </div>  
+  </div>
+</div>

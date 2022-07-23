@@ -5,9 +5,11 @@ class BookingsMailer < ApplicationMailer
   #
   #   en.bookings_mailer.booking_confirmation.subject
   #
-  def booking_confirmation
-    @greeting = "Hi"
+  def booking_confirmation(booking)
+    @booking = booking
+    @customer = booking.customer
+    @workshop = booking.workshop
 
-    mail to: "to@example.org"
+    mail to: @customer.email, subject: "Booking confirmed for #{@workshop.name}"
   end
 end
