@@ -11,7 +11,9 @@
       <p><strong>No.Of tickets:</strong> <%= @booking.no_of_tickets %></p>
       <p><strong>Amount paid:</strong> <%= @booking.amount_paid %></p>
       <hr>
-      <%= @svg.html_safe %>
+      <div class="qrcode">
+        <%= @svg.html_safe %>
+      </div>
     </div>  
   </div>
 </div>

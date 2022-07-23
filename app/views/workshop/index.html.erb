@@ -3,14 +3,14 @@
   <div class="col-lg-6">
     <div class="card">
       <div class="card-header">
-        <%= ws.name %>
+        <h5><%= ws.name %></h5>
       </div>
       <div class="card-body">
-        <h5 class="card-title"><%= ws.description %></h5>        
+        <p class="card-title"><%= ws.description %></p>
         <h4><span class="badge bg-success">From <%= ws.start_date%> to <%= ws.end_date%></span></h4>
         <h4><span class="badge bg-warning">From <%= ws.start_time%> to <%= ws.end_time%></span></h4>
         <%= link_to "Show details", ws, class: "btn btn-primary" %>
       </div>
-    </div>
-  </div>  
+    </div><br>
+  </div>
 <% end %>
