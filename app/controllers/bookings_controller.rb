@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     puts "****** Booking created *******"
     BookingsMailer.booking_confirmation(@booking).deliver_now
     puts "****** BookingMailer created *******"
-    redirect_to workshop_path(@ws), notice: 'Tickets booked'
+    redirect_to workshop_path(@ws), notice: 'Tickets booked successfully.'
   rescue Stripe::StripeError => error
     redirect_to workshop_path(@ws), alert: "#{error.message}"
   end
