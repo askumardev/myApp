@@ -9,8 +9,7 @@ class BookingsController < ApplicationController
     @sc = @ss.find_or_create_customer(@customer)
     @card = @ss.create_stripe_customer_card(params, @sc)
     @amount_to_be_paid = params[:no_of_tickets].to_i * @ws.registration_fee
-    @charge = @ss.create_stripe_charge(@amount_to_be_paid, @sc.id, 
-      @card.id, @ws)
+    @charge = @ss.create_stripe_charge(@amount_to_be_paid, @sc.id, @card.id, @ws)
     puts "****** Strp actions created *******"
     @booking = @ws.bookings.create(
       customer_id: @customer.id,
