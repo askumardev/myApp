@@ -5,6 +5,6 @@ class Booking < ApplicationRecord
   after_create :update_workshop_sit_count
 
   def update_workshop_sit_count
-    workshop.update(remaining_sits: workshop.total_sits - 1)
+    workshop.update(remaining_sits: workshop.remaining_sits - no_of_tickets)
   end
 end

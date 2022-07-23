@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
       no_of_tickets: params[:no_of_tickets].to_i,
       amount_paid: @amount_to_be_paid
     )
+    binding.pry
     redirect_to workshop_path(@ws), notice: 'Tickets booked'
   rescue Stripe::StripeError => error
     redirect_to workshop_path(@ws), notice: "#{error.message}"
