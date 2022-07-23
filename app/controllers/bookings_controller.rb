@@ -11,16 +11,19 @@ class BookingsController < ApplicationController
     @amount_to_be_paid = params[:no_of_tickets].to_i * @ws.registration_fee
     @charge = @ss.create_stripe_charge(@amount_to_be_paid, @sc.id, 
       @card.id, @ws)
+    puts "****** Strp actions created *******"
     @booking = @ws.bookings.create(
       customer_id: @customer.id,
       stripe_transaction_id: @charge.id,
       no_of_tickets: params[:no_of_tickets].to_i,
       amount_paid: @amount_to_be_paid
     )
+    puts "****** Booking created *******"
     BookingsMailer.booking_confirmation(@booking).deliver_now
+    puts "****** BookingMailer created *******"
     redirect_to workshop_path(@ws), notice: 'Tickets booked'
   rescue Stripe::StripeError => error
-    redirect_to workshop_path(@ws), notice: "#{error.message}"
+    redirect_to workshop_path(@ws), alert: "#{error.message}"
   end
 
   private
