@@ -11,10 +11,7 @@
       <p><strong>No.Of tickets:</strong> <%= @booking.no_of_tickets %></p>
       <p><strong>Amount paid:</strong> <%= @booking.amount_paid %></p>
       <hr>
-      <h3>Schedule from WebRor</h3>
-      <h4><span class="badge bg-success">From <%= @workshop.start_date%> to <%= @workshop.end_date%></span>
-        <span class="badge bg-warning">From <%= @workshop.start_time%> to <%= @workshop.end_time%></span>
-      </h4>
+      <%= @svg.html_safe %>
     </div>  
   </div>
 </div>
