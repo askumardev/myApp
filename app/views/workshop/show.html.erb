@@ -28,8 +28,9 @@
     <div class="card shadow">
       <div class="card-body">
         <h4 class="card-title"> Reserve your seat!</h4>
-        <%= form_with url: "#", data: {turbo: false} do |f| %>
-          <% f.hidden_field :workshop_id, value: @ws.id %>
+        <%= form_with url: :bookings, data: {turbo: false} do |f| %>
+
+          <%= f.hidden_field :workshop_id, value: @ws.id, class: "wsid" %>
           <div class="form-group">
             <%= f.label :full_name%>
             <%= f.text_field :full_name, class: "form-control", required: true%>

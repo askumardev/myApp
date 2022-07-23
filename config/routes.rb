@@ -1,5 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do  
+  
   mount Sidekiq::Web => '/sidekiq'
   get 'other/job_done'
   get "welcome/index"
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   # get 'home/index'
   #get 'workshop/index'
   resources :workshop, only: %i[index show]
+  resources :bookings, only: %i[create]
 
   # route where any visitor require the helloWorldJob to be triggered
   post "welcome/trigger_job"
