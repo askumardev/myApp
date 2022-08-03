@@ -15,6 +15,8 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'stripe'
 gem "letter_opener", group: :development
 gem 'rqrcode'
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
