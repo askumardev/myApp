@@ -1,3 +1,4 @@
+require 'open-uri'
 class ScraperController < ApplicationController
   def index
     site = "https://www.bbc.co.uk/"
