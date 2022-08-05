@@ -1,5 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do  
+  get 'scraper/index'
   
   mount Sidekiq::Web => '/sidekiq'
   get 'other/job_done'
