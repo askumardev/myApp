@@ -1,0 +1,41 @@
+<%= form_tag users_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :name, params[:name] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<p>Enter user name eg. 'Philip J Fry'</p>
+<h1>Users</h1>
+<% if @users.present? %>
+	<table>
+	  <thead>
+	    <tr>
+				<th> Id </th>
+	      <th> Name </th>
+	      <th>Age</th>
+	      <th>Gender</th>
+	      <th>Planet</th>
+	      <th>Species</th>
+	      <th>Status</th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	  	<% @users.each do |user| %>
+	      <tr>
+	      	<% @profile = user['profile'] %>
+					<td><%= user['id'] %></td>
+	      	<td><%= user['name'] %></td>
+	        <td><%= @profile['age'] %></td>
+	        <td><%= @profile['gender'] %></td>
+	        <td><%= @profile['planet'] %></td>
+	        <td><%= @profile['species'] %></td>
+	        <td><%= @profile['status'] %></td>
+	      </tr>
+	     <% end %>
+	  </tbody>
+	</table>
+<% else %>
+	<p> No Data </p>
+<% end %>
+

@@ -13,3 +13,12 @@
 * `card = Stripe::Customer.create_source(customer.id,{source: token.id})`
 
 * rails g mailer bookings booking_confirmation
+
+## Active storage
+* `rails active_storage:install`
+
+
+## FunApi
+## copy url http://localhost:3000/users
+### search 'Philip J Fry' in the text filed
+* Image with response is place in `app/assets/images/funapi.png`

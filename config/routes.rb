@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root to: "welcome#index"
   # get 'home/index'
   #get 'workshop/index'
+  resources :users, only: :index
+  resources :articles 
   resources :workshop, only: %i[index show]
   resources :bookings, only: %i[create] do
     get :booking_details, on: :member

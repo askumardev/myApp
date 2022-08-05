@@ -17,6 +17,7 @@ gem "letter_opener", group: :development
 gem 'rqrcode'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
+gem 'rest-client'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
