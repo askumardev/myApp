@@ -17,7 +17,6 @@
 ## Active storage
 * `rails active_storage:install`
 
-
 ## FunApi
 ## copy url http://localhost:3000/users
 ### search 'Philip J Fry' in the text filed
