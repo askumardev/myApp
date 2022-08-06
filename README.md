@@ -22,3 +22,6 @@
 ## copy url http://localhost:3000/users
 ### search 'Philip J Fry' in the text filed
 * Image with response is place in `app/assets/images/funapi.png`
+
+* `require 'hirb'
+* `Hirb.enable({:width => 155, :height => 500})`
