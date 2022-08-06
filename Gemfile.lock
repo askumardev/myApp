@@ -116,6 +116,7 @@ GEM
       raabro (~> 1.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hirb (0.7.3)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -302,6 +303,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.1, >= 2.1.1)
   execjs
   foreman
+  hirb
   httparty
   importmap-rails
   jbuilder

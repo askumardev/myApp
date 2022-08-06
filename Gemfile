@@ -20,6 +20,7 @@ gem 'therubyracer', :platforms => :ruby
 gem 'rest-client'
 gem 'httparty'
 gem 'nokogiri'
+gem 'hirb'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
