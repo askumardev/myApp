@@ -24,3 +24,6 @@
 
 * `require 'hirb'`
 * `Hirb.enable({:width => 155, :height => 500})`
+
+* sudo docker build -t myapp .
+* sudo docker-compose up

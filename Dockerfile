@@ -3,27 +3,25 @@ FROM ruby:2.7.3
 ENV BUNDLER_VERSION=2.3.10
 
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
-  build-essential \
-  gnupg2 \
-  less \
-  git \
-  libpq-dev \
   postgresql-client \
-  libvips42 \
-&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-ENV LANG=C.UTF-8 \
-  BUNDLE_JOBS=4 \
-  BUNDLE_RETRY=3
+  libxml2-dev \
+  libxslt-dev \
+  nodejs \
+  yarn \
+  libffi-dev \
+  libc-dev \
+  file \
+  git \
+  tzdata \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
   
-RUN gem update --system && gem install bundler
+WORKDIR /app
+COPY . /app/
 
-WORKDIR /usr/src/app
+ENV BUNDLE_PATH /gems
+RUN bundle install
 
-ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
+ENTRYPOINT ["bin/rails"]
+CMD ["bundle", "exec", "rails", "s", "-b ", "0.0.0.0"]
 
 EXPOSE 3000
-
-CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
-
-
