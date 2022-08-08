@@ -27,3 +27,4 @@
 
 * sudo docker build -t myapp .
 * sudo docker-compose up
+* 
