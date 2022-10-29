@@ -10,7 +10,7 @@
 # #                         start_time: "10 AM", end_time: "10 PM", total_sits: 100,
 # #                         remaining_sits:0, registration_fee: 1500 }])
 
-Article.create([{name: "sample1", comment: "sample1 comment"},{name: "sample2", comment: "sample2 comment"}])
+#Article.create([{name: "sample1", comment: "sample1 comment"},{name: "sample2", comment: "sample2 comment"}])
 # workshops = Workshop.create([
 #   {
 #     name: 'Ruby on Rails Full Stack Development Bootcamp',
@@ -134,3 +134,6 @@ Article.create([{name: "sample1", comment: "sample1 comment"},{name: "sample2", 
 #     registration_fee: 1000
 #   }
 # ])
+
+TodoList.create(title: "Schedule meetings: IT, Accounts, HR", done: false)
+TodoList.create(title: "Visit children's home: perform duties", done: false)

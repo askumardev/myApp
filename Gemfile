@@ -21,6 +21,7 @@ gem 'rest-client'
 gem 'httparty'
 gem 'nokogiri'
 gem 'hirb'
+gem 'rack-cors', :require => 'rack/cors'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
