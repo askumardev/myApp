@@ -22,7 +22,6 @@ class Api::V1::TodoListsController < ApplicationController
   end
 
   private
-
   def tdlist_param
     params.require(:tdlist).permit(:title, :done)
   end
