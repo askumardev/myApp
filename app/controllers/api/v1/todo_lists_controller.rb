@@ -1,4 +1,4 @@
-class TodoListsController < ApplicationController
+class Api::V1::TodoListsController < ApplicationController
   def index
     tdlists = TodoList.order("created_at DESC")
     render json: tdlists
