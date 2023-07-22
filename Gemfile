@@ -16,7 +16,7 @@ gem 'stripe'
 gem "letter_opener", group: :development
 gem 'rqrcode'
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+#gem 'therubyracer', '~> 0.12.2'
 gem 'rest-client'
 gem 'httparty'
 gem 'nokogiri'
