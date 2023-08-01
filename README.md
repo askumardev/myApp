@@ -28,3 +28,7 @@
 * sudo docker build -t myapp .
 * sudo docker-compose up
 * tp TodoList.all(To show tables in table format in rails comsole)
+
+## Rspec
+* gem "rspec" && bundle install
+* bundle exec rspec || bundle exec rspec --format documentation
