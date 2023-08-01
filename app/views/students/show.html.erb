@@ -1,0 +1,11 @@
+<h1><%= @student.name %></h1>
+
+<ul>
+  <% @student.degrees.each do |degree| %>
+    <li>
+      <%= degree.name %> 
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back ", students_path %>

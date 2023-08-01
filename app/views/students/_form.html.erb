@@ -1,0 +1,47 @@
+<hr>
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p><strong>Student Details:</strong></p>
+  <div class="row">
+    <div class="col">
+      <label class="control-label col-sm-5 col-md-4" for="team_membr_fname"> Name <span style="color:Red"></span></label> 
+      <%= f.text_field :name, :required=>true ,:class=>"form-control" %>
+    </div>
+    <div class="col">
+      <label class="control-label col-sm-5 col-md-4" for="team_membr_fname"> Mobile <span style="color:Red"></span></label> 
+      <%= f.text_field :mobile, :required=>true ,:class=>"form-control" %>
+    </div>
+  </div>
+  <hr>
+  
+    
+  <p><strong>Degree:</strong></p>
+  <div class="row">
+    
+    <div class= "col-md-10">
+      <%= f.fields_for :student_degrees do |sd| %>      
+        <%= render "student_degree_fields", f: sd %>     
+      <% end %>
+    </div>
+    <div class= "col-md-2">
+      <%= link_to_add_association 'add degree', f, :student_degrees%>
+    </div>
+  </div>
+  
+ 
+  <div class="row " align="center" >
+    <%= f.submit 'Save',:class=>"btn btn-success" %>
+    <button type="reset"  class="btn btn-warning">Reset</button> 
+    <%= link_to 'Back', students_path,:class=>"btn btn-primary" %> 
+  </div>
+  </br>  
+<% end %>

@@ -22,6 +22,7 @@ gem 'httparty'
 gem 'nokogiri'
 gem 'hirb'
 gem 'rack-cors'
+gem 'jquery-rails'
 gem 'cocoon'
 
 gem 'mini_racer', platforms: :ruby

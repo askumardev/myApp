@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do  
   get 'scraper/index'
+  resources :students
   
   mount Sidekiq::Web => '/sidekiq'
   get 'other/job_done'

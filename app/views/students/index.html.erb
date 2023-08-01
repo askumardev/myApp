@@ -1,0 +1,15 @@
+<h1>Student</h1>
+
+<% @students.each do |student| %>
+  <h2>
+    <%= link_to student.name,student_path(student.id) %>
+  </h2>
+
+  <ul>
+  <% student.student_degrees.each do |sd| %>
+    <li>
+      <%= sd.degree.name %>  <%= sd.passing_year %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

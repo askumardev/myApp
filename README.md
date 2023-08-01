@@ -1,5 +1,14 @@
 # myApp
 
+## Generators
+* rails generate model Student
+* rails db:migrate
+* rails generate controller Student
+* rails g migration add_passing_year_in_student_degrees
+
+## Imp cmds
+* sudo rm -rf tmp
+
 ## sidekiq
 * add `gem 'sidekiq'`
 * `bundle install`

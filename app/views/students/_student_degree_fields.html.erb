@@ -1,0 +1,15 @@
+
+
+<div class="nested-fields">
+  <div class="fields">
+    <div class="row ">
+      
+      <label class="control-label col-md-1" for="team_membr_fname">Degree <span style="color:Red"></span></label>
+
+      <%= f.collection_select :degree_id, Degree.all,:id,:name, {:include_blank => 'Select'} ,:class=>"form-control",:style=>"width:30%;"%>
+    
+      <label class="control-label col-sm-5 col-md-4" for="team_membr_fname"> Passing Year <span style="color:Red"></span></label> 
+      <%= f.text_field :passing_year,  class: 'datepicker' %>
+    </div>
+  </div>
+</div>

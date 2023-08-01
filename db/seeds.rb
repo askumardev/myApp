@@ -135,5 +135,17 @@
 #   }
 # ])
 
-TodoList.create(title: "Schedule meetings: IT, Accounts, HR", done: false)
-TodoList.create(title: "Visit children's home: perform duties", done: false)
+# TodoList.create(title: "Schedule meetings: IT, Accounts, HR", done: false)
+# TodoList.create(title: "Visit children's home: perform duties", done: false)
+
+#student = Student.create(name: "kumar", mobile:"9177382092")
+
+tenth = Degree.create(name: "Tenth")
+plustwo = Degree.create(name: "Plus2")
+bachelors = Degree.create(name: "BTech")
+masters = Degree.create(name: "MTech")
+
+StudentDegree.create(student_id: student.id, degree_id: tenth.id)
+StudentDegree.create(student_id: student.id, degree_id: plustwo.id)
+StudentDegree.create(student_id: student.id, degree_id: bachelors.id)
+StudentDegree.create(student_id: student.id, degree_id: masters.id)
