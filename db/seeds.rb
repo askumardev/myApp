@@ -138,7 +138,7 @@
 # TodoList.create(title: "Schedule meetings: IT, Accounts, HR", done: false)
 # TodoList.create(title: "Visit children's home: perform duties", done: false)
 
-#student = Student.create(name: "kumar", mobile:"9177382092")
+student = Student.create(name: "kumar", mobile:"9177382092")
 
 tenth = Degree.create(name: "Tenth")
 plustwo = Degree.create(name: "Plus2")
