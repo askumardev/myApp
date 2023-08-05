@@ -5,6 +5,7 @@
 * rails db:migrate
 * rails generate controller Student
 * rails g migration add_passing_year_in_student_degrees
+* rails g serializer TodoList
 
 ## Imp cmds
 * sudo rm -rf tmp
