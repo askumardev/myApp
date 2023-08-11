@@ -2,6 +2,7 @@ require 'sidekiq/web'
 Rails.application.routes.draw do  
   get 'scraper/index'
   resources :students
+  get 'set_theme', to: 'theme#update'
   
   mount Sidekiq::Web => '/sidekiq'
   get 'other/job_done'

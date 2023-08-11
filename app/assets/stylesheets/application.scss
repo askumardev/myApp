@@ -8,3 +8,35 @@
 .card_space{
   height: 160px;
 }
+
+
+// :root {
+//   --light-bg-color: silver;
+//   --light-text-color: white;
+//   --dark-bg-color: black;
+//   --dark-text-color: white;
+// } 
+
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background: var(--dark-bg-color);
+//     color: var(--dark-text-color);
+//   }
+
+//   body.light {
+//     background: var(--light-bg-color);
+//     color: var(--light-text-color);
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   body {
+//     background: var(--light-bg-color);
+//     color: var(--light-text-color);
+//   }
+
+//   body.dark {
+//     background: var(--dark-bg-color);
+//     color: var(--dark-text-color);
+//   }
+// }
