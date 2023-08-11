@@ -24,6 +24,7 @@ gem 'hirb'
 gem 'rack-cors'
 gem 'jquery-rails'
 gem 'cocoon'
+gem 'active_model_serializers', '~> 0.10.2'
 
 gem 'mini_racer', platforms: :ruby
 gem 'autoprefixer-rails'

@@ -6,14 +6,15 @@ class UsersController < ApplicationController
 
   private
   def get_user_profile(params)
-    response = RestClient.get(
-      "#{API_URL}/users"
-    )
+    response = RestClient.get("#{API_URL}/users")
 
     data = JSON.parse(response.body)
-    res = data['users'].select { |values| values["name"] == params[:name] }
+    #binding.pry
+    res = data['data'].select { |values| values["first_name"] == params[:name] }
     if data['errors'].present?
       return nil
+    elsif res.blank?
+      []#render false#render json: {"msg": "Name not found."}
     else
       res
     end

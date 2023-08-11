@@ -4,33 +4,34 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
-<p>Enter user name eg. 'Philip J Fry'</p>
+<p>Enter user name eg. 'Philip or Lindsay'</p>
 <h1>Users</h1>
 <% if @users.present? %>
 	<table>
 	  <thead>
 	    <tr>
 				<th> Id </th>
-	      <th> Name </th>
-	      <th>Age</th>
-	      <th>Gender</th>
-	      <th>Planet</th>
+	      <th>Last Name </th>
+	      <th>Email</th>
+	      <th>Avatar</th>
+	      <!-- <th>Planet</th>
 	      <th>Species</th>
-	      <th>Status</th>
+	      <th>Status</th> -->
 	    </tr>
 	  </thead>
 
 	  <tbody>
 	  	<% @users.each do |user| %>
+	  	<%# binding.pry%>
 	      <tr>
-	      	<% @profile = user['profile'] %>
+	      	<% @profile = user['first_name'] %>
 					<td><%= user['id'] %></td>
-	      	<td><%= user['name'] %></td>
-	        <td><%= @profile['age'] %></td>
-	        <td><%= @profile['gender'] %></td>
-	        <td><%= @profile['planet'] %></td>
-	        <td><%= @profile['species'] %></td>
-	        <td><%= @profile['status'] %></td>
+	      	<td><%= user['last_name'] %></td>
+	        <td><%= user['email'] %></td>
+	        <td><%= user['avatar'] %></td>
+	        <td><%#= @profile['planet'] %></td>
+	        <td><%#= @profile['species'] %></td>
+	        <td><%#= @profile['status'] %></td>
 	      </tr>
 	     <% end %>
 	  </tbody>
