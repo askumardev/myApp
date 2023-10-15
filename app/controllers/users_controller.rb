@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def index
     @users = get_user_profile(params) if params[:name]
-    
   end
 
   private
