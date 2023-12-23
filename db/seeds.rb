@@ -10,7 +10,7 @@
 # #                         start_time: "10 AM", end_time: "10 PM", total_sits: 100,
 # #                         remaining_sits:0, registration_fee: 1500 }])
 
-#Article.create([{name: "sample1", comment: "sample1 comment"},{name: "sample2", comment: "sample2 comment"}])
+Article.create([{name: "sample1", comment: "sample1 comment"},{name: "sample2", comment: "sample2 comment"}])
 # workshops = Workshop.create([
 #   {
 #     name: 'Ruby on Rails Full Stack Development Bootcamp',
@@ -138,14 +138,14 @@
 # TodoList.create(title: "Schedule meetings: IT, Accounts, HR", done: false)
 # TodoList.create(title: "Visit children's home: perform duties", done: false)
 
-student = Student.create(name: "kumar", mobile:"9177382092")
+# student = Student.create(name: "kumar", mobile:"9177382092")
 
-tenth = Degree.create(name: "Tenth")
-plustwo = Degree.create(name: "Plus2")
-bachelors = Degree.create(name: "BTech")
-masters = Degree.create(name: "MTech")
+# tenth = Degree.create(name: "Tenth")
+# plustwo = Degree.create(name: "Plus2")
+# bachelors = Degree.create(name: "BTech")
+# masters = Degree.create(name: "MTech")
 
-StudentDegree.create(student_id: student.id, degree_id: tenth.id)
-StudentDegree.create(student_id: student.id, degree_id: plustwo.id)
-StudentDegree.create(student_id: student.id, degree_id: bachelors.id)
-StudentDegree.create(student_id: student.id, degree_id: masters.id)
+# StudentDegree.create(student_id: student.id, degree_id: tenth.id)
+# StudentDegree.create(student_id: student.id, degree_id: plustwo.id)
+# StudentDegree.create(student_id: student.id, degree_id: bachelors.id)
+# StudentDegree.create(student_id: student.id, degree_id: masters.id)
