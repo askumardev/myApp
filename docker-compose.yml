@@ -1,36 +1,35 @@
 
 # docker-compose.yml
-version: '3.8'
+version: '3.9'
 
 services:
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle install && rails server -b 0.0.0.0 -p 3000"
-    volumes:
-      - .:/app
     ports:
       - "3000:3000"
+    volumes:
+      - .:/myapp
+    stdin_open: true        # ✅ enables interactive input
+    tty: true               # ✅ enables terminal-like behavior
     depends_on:
       - db
     environment:
-      DATABASE_USERNAME: postgres
-      DATABASE_PASSWORD: postgres
-      DATABASE_HOST: db
-    stdin_open: true
-    tty: true
+      - RAILS_ENV=development
+      - INSIDE_DOCKER=true
+    command: bash -c "rm -f tmp/pids/server.pid && bin/rails server -b 0.0.0.0"
 
   db:
-    image: postgres:14
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+    image: postgres:15
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: myapp_development
 
 volumes:
   postgres_data:
+
 
 
 
