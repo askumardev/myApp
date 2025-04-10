@@ -17,6 +17,8 @@
 * to debug while the rails server is running
 * `docker ps`
 * `docker attach myapp-web-1` (provide the name)
+* docker images
+* `docker-compose exec web rails console`
 
 ### Generators
 * rails generate model Student
