@@ -74,11 +74,13 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
   gem "database_cleaner"
   gem "rspec-rails"
   gem 'table_print', '~> 1.5', '>= 1.5.7'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
 end
 
 group :development do

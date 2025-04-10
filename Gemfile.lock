@@ -89,6 +89,7 @@ GEM
       popper_js (>= 2.9.3, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.3.0)
+    byebug (12.0.0)
     capybara (3.39.2)
       addressable
       matrix
@@ -115,9 +116,6 @@ GEM
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
     date (3.4.1)
-    debug (1.8.0)
-      irb (>= 1.5.0)
-      reline (>= 0.3.1)
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -217,6 +215,11 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    pry-byebug (3.11.0)
+      byebug (~> 12.0)
+      pry (>= 0.13, < 0.16)
+    pry-rails (0.3.11)
+      pry (>= 0.13.0)
     psych (5.2.3)
       date
       stringio
@@ -388,7 +391,6 @@ DEPENDENCIES
   cocoon
   cssbundling-rails
   database_cleaner
-  debug
   dotenv-rails (~> 2.1, >= 2.1.1)
   execjs
   foreman
@@ -403,6 +405,8 @@ DEPENDENCIES
   nokogiri
   pg (~> 1.5, >= 1.5.3)
   pry
+  pry-byebug
+  pry-rails
   puma (>= 6.0)
   rack-cors
   rails (= 7.2.0.beta3)
@@ -427,4 +431,4 @@ RUBY VERSION
    ruby 3.3.2p78
 
 BUNDLED WITH
-   2.5.11
+   2.4.22
