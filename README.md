@@ -1,6 +1,24 @@
 # myApp
 
-## Generators
+### docker cmds
+#### if any changes made
+* docker-compose down
+* docker-compose build
+* docker-compose up -d
+* docker-compose run web rails db:create db:migrate db:seed
+
+* docker-compose run web rails db:seed
+* docker-compose run web rails db:reset
+* docker-compose run web bundle exec rspec
+
+
+#To run server
+* docker-compose up
+* to debug while the rails server is running
+* docker ps
+* docker attach myapp-web-1(provide the name)
+
+### Generators
 * rails generate model Student
 * rails db:migrate
 * rails generate controller Student
@@ -8,10 +26,10 @@
 * rails g serializer TodoList
 * http://localhost:3000/api/v1/samples
 
-## Imp cmds
+### Imp cmds
 * sudo rm -rf tmp
 
-## sidekiq
+### sidekiq
 * add `gem 'sidekiq'`
 * `bundle install`
 * configure `config.active_job.queue_adapter = :sidekiq` in `config/application.rb`
@@ -25,11 +43,11 @@
 
 * rails g mailer bookings booking_confirmation
 
-## Active storage
+### Active storage
 * `rails active_storage:install`
 
-## FunApi
-## copy url http://localhost:3000/users
+### FunApi
+### copy url http://localhost:3000/users
 ### search 'Philip J Fry' in the text filed
 * Image with response is place in `app/assets/images/funapi.png`
 
@@ -40,6 +58,6 @@
 * sudo docker-compose up
 * tp TodoList.all(To show tables in table format in rails comsole)
 
-## Rspec
+### Rspec
 * gem "rspec" && bundle install
 * bundle exec rspec || bundle exec rspec --format documentation
