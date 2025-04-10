@@ -26,6 +26,18 @@ development:
   pool: 5
   timeout: 5000
 
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: myApp_test
+  username: postgres
+  password: postgres
+  port: 5432
+  #host: 172.18.0.2
+  host: localhost
+  pool: 5
+  timeout: 5000
+
 # default: &development
 #   adapter: postgresql
 #   encoding: unicode
