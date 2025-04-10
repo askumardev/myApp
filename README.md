@@ -2,10 +2,10 @@
 
 ### docker cmds
 #### if any changes made
-* docker-compose down
-* docker-compose build
-* docker-compose up -d
-* docker-compose run web rails db:create db:migrate db:seed
+* `docker-compose down`
+* `docker-compose build`
+* `docker-compose up -d`
+* `docker-compose run web rails db:create db:migrate db:seed`
 
 * docker-compose run web rails db:seed
 * docker-compose run web rails db:reset
@@ -13,10 +13,10 @@
 
 
 #To run server
-* docker-compose up
+* `docker-compose up`
 * to debug while the rails server is running
-* docker ps
-* docker attach myapp-web-1(provide the name)
+* `docker ps`
+* `docker attach myapp-web-1` (provide the name)
 
 ### Generators
 * rails generate model Student
