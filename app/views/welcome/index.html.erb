@@ -1,4 +1,4 @@
-<!-- 
+<!--
 <%= form_with url: welcome_trigger_job_path do |f| %>
  <%= f.submit 'Launch job' %>
 <% end %>
@@ -19,7 +19,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Sidekiq app</h5>
-        <p class="card-text">Sample code to trigger sidekiq job(start all servers).</p>       
+        <p class="card-text">Sample code to trigger sidekiq job(start all servers).</p>
         <%= form_with url: welcome_trigger_job_path do |f| %>
           <%= f.submit 'Launch job', class: "btn btn-primary" %>
         <% end %>
@@ -43,7 +43,7 @@
       <div class="card-body">
         <h5 class="card-title">Articles app</h5>
         <p class="card-text">Sample Articles app.</p>
-        <%= link_to "Articles", articles_path, class: "btn btn-primary" %>        
+        <%= link_to "Articles", articles_path, class: "btn btn-primary" %>
       </div>
     </div>
   </div>
@@ -64,7 +64,28 @@
       <div class="card-body">
         <h5 class="card-title">Student app</h5>
         <p class="card-text">Sample app to show nested forms.</p>
-        <%= link_to "Students", students_path, class: "btn btn-primary" %>        
+        <%= link_to "Students", students_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row card_space">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Chatbot App</h5>
+        <p class="card-text">Sample Chat app.</p>
+        <%= link_to "CgPt", ai_index_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">**** app</h5>
+        <p class="card-text">****</p>
+        <%#= link_to "Students", students_path, class: "btn btn-primary" %>
       </div>
     </div>
   </div>

@@ -1,0 +1,19 @@
+<!-- app/views/ai/index.html.erb -->
+<h1> Smart Blog Assistant</h1>
+
+<%= form_with url: "/generate", method: :post, local: true do |form| %>
+  <div>
+    <%= form.label :prompt, "Enter your blog topic or idea:" %><br>
+    <%= form.text_area :prompt, rows: 4, style: "width: 100%;" %><br><br>
+    <%= form.submit "Generate Blog", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<% if @output.present? %>
+  <h2>📝 AI-Generated Blog:</h2>
+  <pre style="white-space: pre-wrap;"><%= @output %></pre>
+<% end %>
+
+<% if @error.present? %>
+  <p style="color:red;"><%= @error %></p>
+<% end %>
