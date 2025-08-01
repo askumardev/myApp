@@ -1,11 +1,28 @@
 # myApp
+if you are running the app in windows machine using wsl
+sudo apt install wsl
 
+Enable WSL Integration in Docker Desktop
+Open Docker Desktop (via Start menu or tray icon).
+
+Go to Settings → Resources → WSL Integration.
+
+Enable:
+
+✅ “Enable integration with my default WSL distro”
+
+✅ And/or specifically check Ubuntu-24.04
+
+Click Apply & Restart
+
+create a .env file and add the below env variable
+INSIDE_DOCKER=true
 ### docker cmds
 #### if any changes made
 * `docker-compose down`
 * `docker-compose build`
 * `docker-compose up -d`
-* `docker-compose run web rails db:create db:migrate db:seed`
+* `docker-compose run web rails db:drop db:create db:migrate db:seed`
 
 * docker-compose run web rails db:seed
 * docker-compose run web rails db:reset

@@ -1,5 +1,8 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  # Root page
+  root to: "welcome#index"
+
   get 'scraper/index'
   resources :students
   get 'set_theme', to: 'theme#update'
@@ -8,7 +11,7 @@ Rails.application.routes.draw do
   get 'other/job_done'
   #get "welcome/index"
   #root to: "home#index"
-  root to: "welcome#index"
+  
   # get 'home/index'
   #get 'workshop/index'
   resources :users, only: :index
