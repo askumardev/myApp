@@ -86,20 +86,7 @@
         <div id="flash-messages"></div>
         <button id="open-article-dialog" class="btn btn-success mb-3">New Article</button>
         <dialog id="article-dialog">
-          <form method="post" action="<%= articles_path %>" data-remote="true" id="new-article-form">
-            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-            <h3>Create New Article</h3>
-            <div class="mb-3">
-              <label for="article_title">Title</label>
-              <input type="text" name="article[name]" id="article_name" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label for="article_body">Body</label>
-              <textarea name="article[comment]" id="article_comment" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Create Article</button>
-            <button type="button" id="close-article-dialog" class="btn btn-secondary">Cancel</button>
-          </form>
+          <%= render "articles/form", article: @article %>
         </dialog>
         
         <script>
