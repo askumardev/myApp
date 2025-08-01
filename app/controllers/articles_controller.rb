@@ -23,14 +23,18 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+    if @article.save
+      #binding.pry
+      flash.now[:notice] = "Article created successfully!"
+      respond_to do |format|
+        format.html { redirect_to @article }
+        format.js   # Looks for create.js.erb
+      end
+    else
+      flash.now[:alert] = @article.errors.full_messages.join(", ")
+      respond_to do |format|
+        format.html { render :new }
+        format.js   # Looks for create.js.erb
       end
     end
   end

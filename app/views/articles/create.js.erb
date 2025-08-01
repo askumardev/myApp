@@ -1,0 +1,4 @@
+
+document.getElementById('article-dialog').close();
+document.getElementById('new-article-form').reset();
+document.getElementById('flash-messages').innerHTML = "<div class='alert alert-info'><%= j flash[:notice] || flash[:alert] %></div>";
